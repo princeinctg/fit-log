@@ -18,7 +18,7 @@ export interface Workout {
   isDone?: boolean;
 }
 
-// সংখ্যা পার্স করার হেল্পার
+
 export const parseNumber = (val?: number | string): number => {
   if (typeof val === "number") return val;
   if (!val) return 0;
