@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { usePlan } from "@/context/PlanContext";
+import { usePlan } from "../context/PlanContext";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -14,7 +14,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Left: Brand Logo & Title */}
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/logo.png" alt="FitLog Logo" width={26} height={26} />
+          <Image src="/assets/logo.png" alt="FitLog Logo" width={26} height={26} />
           <span className="font-extrabold text-xl tracking-wider text-white">
             FITLOG
           </span>
@@ -26,8 +26,8 @@ export default function Navbar() {
             href="/"
             className={`transition ${
               pathname === "/"
-                ? "text-[#ccff00] font-semibold border-b-2 border-[#ccff00] pb-0.5"
-                : "text-zinc-400 hover:text-white"
+                ? "text-[#C2F800] font-semibold border-b-2 border-[#C2F800] pb-0.5"
+                : "text-[#9CA3AF] hover:text-white"
             }`}
           >
             Workout
@@ -36,8 +36,8 @@ export default function Navbar() {
             href="/my-plan"
             className={`transition ${
               pathname === "/my-plan"
-                ? "text-[#ccff00] font-semibold border-b-2 border-[#ccff00] pb-0.5"
-                : "text-zinc-400 hover:text-white"
+                ? "text-[#C2F800] font-semibold border-b-2 border-[#C2F800] pb-0.5"
+                : "text-[#9CA3AF] hover:text-white"
             }`}
           >
             My Plan
@@ -61,7 +61,7 @@ export default function Navbar() {
             className="flex items-center gap-1.5 border border-zinc-700 text-zinc-300 text-xs font-medium px-3 py-1.5 rounded-full hover:border-zinc-500 transition"
           >
             <span>Saved</span>
-            <span className="bg-zinc-800 text-zinc-300 text-[11px] px-1.5 py-0.2 rounded-full">
+            <span className="bg-zinc-800 text-[#9CA3AF] text-[11px] px-1.5 py-0.2 rounded-full">
               {savedCount}
             </span>
           </Link>

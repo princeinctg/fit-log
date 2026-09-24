@@ -16,8 +16,8 @@ export interface Workout {
   rating?: number | string;
   instructions?: string[];
   isDone?: boolean;
+  caloriesBurned?: number | string;
 }
-
 
 export const parseNumber = (val?: number | string): number => {
   if (typeof val === "number") return val;
